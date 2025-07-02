@@ -1,0 +1,11 @@
+{
+  "name": "SnowRunescape/llm-flow",
+  "autoload": {
+    "psr-4": {
+      "LangChain\\": "src/"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^7.0"
+  }
+}
