@@ -1,11 +1,30 @@
 {
-  "name": "SnowRunescape/llm-flow",
+  "name": "snowrunescape/llm-flow",
+  "description": "A library for building LLM-powered applications",
+  "type": "library",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bruno Caitano",
+      "email": "bruno@snowdev.com.br"
+    }
+  ],
   "autoload": {
     "psr-4": {
-      "LangChain\\": "src/"
+      "SnowRunescape\\LLMFlow\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SnowRunescape\\LLMFlow\\Tests\\": "tests/"
     }
   },
   "require": {
+    "php": ">=7.4",
     "guzzlehttp/guzzle": "^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6"
   }
 }
