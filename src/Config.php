@@ -10,14 +10,32 @@ namespace SnowRunescape\LLMFlow;
  */
 class Config
 {
+    public string $model;
+    public float $temperature;
+    public float $topP;
+    public int $maxTokens;
+    public ?string $systemPrompt;
+    public array $stop;
+    public array $tools;
+    public array $extras;
+
     public function __construct(
-        public string $model = 'gpt-4o',
-        public float $temperature = 0.7,
-        public float $topP = 1.0,
-        public int $maxTokens = 1024,
-        public ?string $systemPrompt = null,
-        public array $stop = [],
-        public array $tools = [],
-        public array $extras = []
-    ) {}
+        string $model = 'gpt-4o',
+        float $temperature = 0.7,
+        float $topP = 1.0,
+        int $maxTokens = 1024,
+        ?string $systemPrompt = null,
+        array $stop = [],
+        array $tools = [],
+        array $extras = []
+    ) {
+        $this->model = $model;
+        $this->temperature = $temperature;
+        $this->topP = $topP;
+        $this->maxTokens = $maxTokens;
+        $this->systemPrompt = $systemPrompt;
+        $this->stop = $stop;
+        $this->tools = $tools;
+        $this->extras = $extras;
+    }
 }
